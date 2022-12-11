@@ -1,0 +1,26 @@
+.after{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+.l-body{
+    background-image:url('https://spacetourismguide.com/wp-content/uploads/2019/07/Space-Tourism-Companies-Hero-2.jpeg');
+    background-position: center;
+    background-size:cover;
+    height: 100vh;
+    padding:0px;
+}
+
+.text-s{
+    font-size: 20px;
+    color:cornsilk;
+    font-weight: 600;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+.btn{
+    border-radius: 20px;
+    background-color: grey;
+}

@@ -1,0 +1,14 @@
+.aplha{
+    background-image:url('https://spacetourismguide.com/wp-content/uploads/2019/07/Space-Tourism-Companies-Space-Adventures-Karen-Nyberg-via-Flickr.jpg');
+    background-position: center;
+    background-size:cover;
+    height: 100vh;
+    padding:0px;
+}
+
+.p-font{
+    font-size: 25px ;
+    font-family:monospace ;
+    font-weight: 700;
+    color:snow;
+}

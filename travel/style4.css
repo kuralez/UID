@@ -1,0 +1,14 @@
+.delta{
+    background-image:url('https://spacetourismguide.com/wp-content/uploads/2019/07/Space-Tourism-Companies-SpaceX-Crew-Dragon.jpg');
+    background-position: center;
+    background-size:cover;
+    height: 100vh;
+    padding:0px;
+}
+
+.n-font{
+    font-size: 25px ;
+    font-family:monospace ;
+    font-weight: 900;
+    color:snow;
+}

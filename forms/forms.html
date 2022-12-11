@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <title>Forms</title>
+</head>
+<body style="background-color:#B1907F;",align="Centre">
+  <a class="txt" href="file:///F:/index/index.html">index</a>
+    <center>
+        <h2>Enter the Details</h2>
+        <form style="padding:50px" align="center" action = "login.php" method = "post">         
+            <label for = "name"> NAME : </label>
+            <input type = "text" name = "name"  minlength = "3" id = "name" required />
+            <br><br>
+            
+            <label for = "phone"> PHONE : </label>
+            <input type = "text"  name = "Phone" id = "phone" pattern = [0-9]{10} />
+            <br><br>
+            
+            <label for = "E-Mail"> E-MAIL ID : </label>
+            <input type = "text" name = "E-Mail" id = "E-Mail" />
+            <br><br>
+            
+            SELECT DEPARTMENT 
+            <br><br>                     
+            <input type = "radio" name = "dept" id = "cse">
+            <label for = "cse"> CSE </label>
+            
+            <input type = "radio" name = "dept" id = "ece">
+            <label for = "ece"> ECE </label>
+            
+            <input type = "radio" name = "dept" id = "mec">
+            <label for = "mec"> MECH </label>
+            <br><br>
+            
+            <label for = "country"> COUNTRY OF ORIGIN : </label>
+            <select name = "country" id = "country">
+              <option value = "none" selected disabled hidden>Select a Country</option>
+              <option value = "India">INDIA</option>
+              <option value = "Pakistan">PAKISTAN</option>
+              <option value = "Sri-lanka">SRI-LANKA</option>
+              </select>
+            <br><br>
+            
+            <label for = "comments"> COMMENTS : </label><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <textarea rows="5" cols = "25" name = "COMMENTS" id = "comments"></textarea>
+            <br><br>
+            
+            <input type = "submit" value = "Submit" name = "submit">&nbsp;&nbsp;&nbsp;
+            <input type = "reset" value = "Reset" name = "reset">&nbsp;&nbsp;&nbsp;
+          </form>
+    </center>
+      
+</body>

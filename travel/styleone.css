@@ -1,0 +1,12 @@
+.wall{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.background-image{
+    background-image: url('D:\kgf\Amrita-Vishwa-Vidyapeetham-Coimbatore-2048x991.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}

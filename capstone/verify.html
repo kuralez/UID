@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  OTP
+</title>
+<style>
+  body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+.container {
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  margin-left: 550px;
+
+}
+  input[type=text], input[type=password],input[type=number] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus,input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.btn {
+  background-color: rgb(9  , 52, 121,100);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nava{
+  text-decoration: none;
+  color: black;
+  padding-left: 10px;
+  font-size: large;
+}
+.back{
+  background-repeat: no-repeat;
+  width: 1400px;
+  height: 400px;
+  padding-right: 9px;
+  background-image: url("12.jpeg");
+}
+a.nava:hover{
+  color: white;
+}
+.col{
+  color: rgb(9 , 97, 121);
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.upp{
+  padding-left: 100px;
+
+}
+</style>
+
+<script>
+
+  function validateNumber(){
+	let mobileNumber=document.getElementById("mobile").value;
+	if(mobileNumber){
+		if(mobileNumber.match(/^\d{10}$/)){
+			document.getElementById("alert").innerHTML="";
+			return true;
+		}
+		else{
+			document.getElementById("alert").innerHTML="Enter a valid mobile number";
+			}
+		}
+	}
+
+
+
+function sendOTP(){
+	if(validateNumber()){
+	otp=Math.floor(1000+Math.random() * 9000);
+	if(typeof(Storage) !== "undefined"){
+	sessionStorage.setItem("otp", otp);
+	}
+	alert(otp);
+	}
+	else{
+	document.getElementById("alert").innerHTML="Enter a valid mobile number";
+		return false;
+	}
+}
+
+function validateOTP(){
+	let userOTP=document.getElementById("otp").value;
+	console.log(otp);
+	if(userOTP.match(/^\d{4}$/)){
+		document.getElementById("alert").innerHTML="";
+		return true;
+	}
+	else{
+		document.getElementById("alert").innerHTML="Enter a valid OTP";
+		return false
+	}
+}
+function verifyOTP(){
+	let userOTP=document.getElementById("otp").value;
+	if(validateOTP()){
+		if(userOTP==sessionStorage.getItem("otp")){
+			alert("success");
+			window.location.href="success.html"
+			return true;
+		}
+		else {alert("failed! Please retry");
+		return false}
+	}
+	else{
+		document.getElementById("alert").innerHTML="Enter a valid OTP";
+	}
+}
+
+
+  </script>					
+
+</head>
+<body class="back">
+  <div>
+    <nav>
+      <a class="nava" href="file:///F:/capstone/Home.html">Home</a>
+      <a class="nava" href="file:///F:/capstone/Login.html">Signin</a>
+      <a class="nava" href="file:///F:/capstone/Signup.html">Signup</a>
+    </nav>
+    <center><h1 class="col">CYBER MALWARE SAFETY SYSTEM</h1></center>
+<div>
+  <form action="#" class="container">
+    <h1>Login</h1>
+
+    <div class="input-container">
+        <input
+        type="number" max="9999" min="1000" placeholder="Enter the OTP" class="mobile" id="otp" oninput="validateOTP()" style="width: 50%"/>
+    </div>
+    <p id="alert"></p>
+    <p class="sub-label">Please enter the OTP you have recieved on <br>your registered mobile number</p>
+    <div class="button-container">
+    <a class="submit-button" onclick="return verifyOTP()">Verify OTP</a>
+
+	<div>
+		<button class="btn"><a style="color: white; text-decoration: none;" href="file:///F:/capstone/Login.html" id="submit" class="submit-button" onclick="return verifyOTP()">Sign in with OTP</a></button>	
+    </div>
+  </form>
+</div>
+</body>
+</html>
